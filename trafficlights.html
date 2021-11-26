@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .lightblock {
+            width: 21%;
+            height: 100px;
+            background-color: bisque;
+            border: 1px solid black;
+            border-radius: 5px;
+            margin: 10% 0 0 10%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .yelight,
+        .redlight {
+            width: 70px;
+            height: 70px;
+            background-color: grey;
+            border-radius: 50%;
+            margin-left: 22px;
+            margin-top: 15px;
+        }
+
+        .grlight {
+            border-radius: 50%;
+            width: 70px;
+            height: 70px;
+            background-color: green;
+            margin-left: 22px;
+            margin-top: 15px;
+        }
+
+        .btn {
+            width: 70px;
+            height: auto;
+            background-color: rgb(245, 240, 240);
+            border-radius: 10%;
+            margin: 10% 0 0 5%;
+            text-align: center;
+            padding: 40px 0 0 0;
+        }
+
+        #next {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class=container>
+        <div class=lightblock>
+            <div id=green class=grlight></div>
+            <div id=yellow class=yelight></div>
+            <div id=red class=redlight></div>
+        </div>
+
+        <div id=next onclick="changeLight(event)" class=btn>NEXT</div>
+    </div>
+
+    <script>
+
+        var light = 1;
+        function changeLight(e) {
+            light++;
+            switch (light) {
+                case 2:
+                    light = 2;
+                    green.style.backgroundColor = "grey";
+                    yellow.style.backgroundColor = "yellow";
+                    break;
+                case 3:
+                    light = 3
+                    yellow.style.backgroundColor = "grey";
+                    red.style.backgroundColor = "red";
+                    break;
+                case 4:
+                    light = 1;
+                    red.style.backgroundColor = "grey";
+                    green.style.backgroundColor = "green";
+                    break;
+            }
+
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>
